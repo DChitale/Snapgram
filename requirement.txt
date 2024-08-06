@@ -1,3 +1,7 @@
 react-router-dom
 tailwindcss-animate
 tailwindcss postcss autoprefixer
+@types/node
+appwrite
+@tanstack/react-query
+@tanstack/react-query-devtools
