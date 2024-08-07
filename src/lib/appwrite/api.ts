@@ -17,7 +17,7 @@ export async function createUserAccount(user: INewUser) {
       user.name
     );
 
-    if (!newAccount) throw Error;
+    if (!newAccount) throw new Error("Account creation failed");
 
     const avatarUrl = avatars.getInitials(user.name);
 
@@ -31,7 +31,7 @@ export async function createUserAccount(user: INewUser) {
 
     return newUser;
   } catch (error) {
-    console.log(error);
+    console.error("Error creating user account:", error);
     return error;
   }
 }
@@ -54,7 +54,8 @@ export async function saveUserToDB(user: {
 
     return newUser;
   } catch (error) {
-    console.log(error);
+    console.error("Error saving user to DB:", error);
+    return error;
   }
 }
 
@@ -90,7 +91,7 @@ export async function getCurrentUser() {
     const currentUser = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.userCollectionId,
-      [Query.equal("accountId", currentAccount.$id)]
+      [Query.equal('accountId', currentAccount.$id)]
     );
 
     if (!currentUser) throw Error;
@@ -184,8 +185,8 @@ export function getFilePreview(fileId: string) {
       fileId,
       2000,
       2000,
-      ImageGravity.Top,
-      100
+      ImageGravity.Center,
+      100,
     );
 
     if (!fileUrl) throw Error;

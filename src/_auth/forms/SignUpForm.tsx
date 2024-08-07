@@ -12,7 +12,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queries";
 import { SignupValidation } from "@/lib/validation";
 import { useUserContext } from "@/context/AuthContext";
-
+import '../../global.css';
 const SignUpForm = () => {
   const { toast } = useToast();
   const navigate = useNavigate();

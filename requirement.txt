@@ -5,3 +5,5 @@ tailwindcss postcss autoprefixer
 appwrite
 @tanstack/react-query
 @tanstack/react-query-devtools
+react-dropzone
+react-intersection-observer
