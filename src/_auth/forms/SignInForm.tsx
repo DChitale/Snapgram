@@ -65,7 +65,7 @@ const SignInForm = () => {
         <Logo />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-7" > Log in to your account </h2>
         <p className="text-primary-600 small-medium md:base-regular mt-7" >
-          To use SocioMax, please enter your account details
+          To use Memoir, please enter your account details
         </p>
         <form 
           onSubmit={form.handleSubmit(onSubmit)} 
