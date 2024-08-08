@@ -2,29 +2,23 @@ import { useUserContext } from "@/context/useUserContext";
 import { Models } from 'appwrite';
 import { Link } from 'react-router-dom';
 import PostStats from './PostStats';
-//import { useState } from 'react';
 
 type GridPostListProps = {
-  posts?:Models.Document[] | undefined;
+  posts?:Models.Document[];
   showUser?: boolean;
   showStats?: boolean;
 }
 
-const GridPostList = ({ posts, showUser = true, showStats = true }: GridPostListProps)=> {
+const GridSavedPostList = ({ posts, showUser = true, showStats = true }: GridPostListProps)=> {
   const { user } = useUserContext();
-  //console.log( posts);
-  //const [ currentPosts, setCurrentPosts ] = useState([]);
-  //const { id } = useParams();
-  //const { pathname } = useLocation();
-  
-    //if(pathname == '/explore') {
-
-      //setCurrentPosts(posts);
-    //}
-    
+  const filteredPosts = posts?.filter((post: Models.Document) => post.save.some((save: Models.Document) => save?.user.$id === user.id));
+    console.log(filteredPosts);
   return (
+    
     <ul className='grid-container'>
-      {posts?.map((post: Models.Document) => {
+        
+      {filteredPosts?.map((post: Models.Document) => {
+        
         return (
           <li key={post.$id} className='relative min-w-80 h-80'>
             <Link to={`/posts/${post.$id}`} className='grid-post_link'>
@@ -47,4 +41,4 @@ const GridPostList = ({ posts, showUser = true, showStats = true }: GridPostList
   )
 }
 
-export default GridPostList;
+export default GridSavedPostList;

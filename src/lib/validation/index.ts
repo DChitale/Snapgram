@@ -15,7 +15,7 @@ export const SigninValidation = z.object({
   password: z.string().min(8, { message: "Password must be at least 8 characters." }),
 });
 
-export const ProfileValidation = z.object({
+export const EditProfileValidation = z.object({
   file: z.custom<File[]>(),
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   username: z.string().min(2, { message: "Name must be at least 2 characters." }),

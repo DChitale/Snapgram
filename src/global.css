@@ -89,6 +89,26 @@
     @apply flex justify-start items-center;
   }
 
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E68528;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+
+
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
     height: 3px;
@@ -100,7 +120,7 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #5c5c7b;
+    background: #E68528;
     border-radius: 50px;
   }
 
@@ -206,7 +226,7 @@
 
   /* Grid Post List */
   .grid-container {
-    @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 max-w-5xl;
+    @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-[100px] gap-y-10 max-w-5xl;
   }
 
   .grid-post_link {
@@ -224,6 +244,11 @@
 
   .leftsidebar-link {
     @apply rounded-lg base-medium hover:bg-primary-500 transition;
+  }
+
+  /* right sidebar */
+  .rightsidebar {
+    @apply hidden sm:flex flex-1 px-10 py-10 justify-center items-center min-w-44 max-w-96 bg-dark-2;
   }
 
   /* Post Card */

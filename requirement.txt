@@ -7,3 +7,4 @@ appwrite
 @tanstack/react-query-devtools
 react-dropzone
 react-intersection-observer
+date-fns
