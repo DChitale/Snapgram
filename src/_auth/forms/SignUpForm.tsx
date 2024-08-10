@@ -74,7 +74,7 @@ const SignUpForm = () => {
         <Logo />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-7" > Create a new account</h2>
         <p className="text-light-3 small-medium md:base-regular mt-7" >
-          To use Memoir, please enter your account details
+          To use SnapGram, please enter your account details
         </p>
         <form 
           onSubmit={form.handleSubmit(onSubmit)} 
