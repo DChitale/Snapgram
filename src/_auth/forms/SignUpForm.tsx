@@ -37,37 +37,42 @@ const SignUpForm = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof SignupValidation>) {
-    // Do something with the form values.
-    //Create new user 
-    const newUser = await createUserAccount(values);
-      console.log(newUser);
-    
-    if(!newUser){
-      return toast({ title: 'Sign up failed. Please try again.' })
-    }
-
-    const session = await signInAccount({
-      email: values.email,
-      password: values.password,
-    });
-
-    if(!session){
-      return toast({ title: "Couldn't log you in."})
-    }
-
-    const isLoggedIn = await checkAuthUser(); 
-    if (isLoggedIn) {
-      form.reset();
-      navigate('/');
-      return toast({title:'Welcome! You are now logged in!'});
-    } else {
-      return toast({ 
+    try {
+      // Attempt to create the user account
+      const newUser = await createUserAccount(values);
+  
+      if (!newUser) {
+        return toast({ title: 'Sign up failed. Please try again.' });
+      }
+  
+      // Now sign in the newly created user
+      const session = await signInAccount({
+        email: values.email,
+        password: values.password,
+      });
+  
+      if (!session) {
+        return toast({ title: "Couldn't log you in." });
+      }
+  
+      // Check if the user is authenticated
+      const isLoggedIn = await checkAuthUser();
+  
+      if (isLoggedIn) {
+        form.reset();
+        navigate('/');
+        return toast({ title: 'Welcome! You are now logged in!' });
+      } else {
+        throw new Error('Authentication failed');
+      }
+    } catch (error) {
+      return toast({
         variant: "destructive",
-        title: 'Sign up failed. Please try again.' 
+        title: 'Sign up or login failed. Please try again.',
       });
     }
   }
-
+  
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col" >
