@@ -22,7 +22,7 @@ const Bottombar = () => {
                 height={16}
                 className={isActive ? 'invert-white'  :" group-hover:invert-white"}
               />
-              <p className={isActive ? 'tiny-medium text-light-1':'tiny-medium text-light-2'}>{link.label}</p>
+              <p className={isActive ? 'tiny-medium text-dark-1':'tiny-medium text-dark-2'}>{link.label}</p>
             </Link>
         )
       })}
