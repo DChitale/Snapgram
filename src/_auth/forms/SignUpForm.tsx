@@ -78,8 +78,8 @@ const SignUpForm = () => {
       <div className="sm:w-420 flex-center flex-col" >
         <Logo />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-7" > Create a new account</h2>
-        <p className="text-light-3 small-medium md:base-regular mt-7" >
-          To use SnapGram, please enter your account details
+        <p className="text-light-3 text-center small-medium md:base-regular mt-7" >
+        Connect with fellow stamp collectors and take your hobby to the next level. Sign up now!
         </p>
         <form 
           onSubmit={form.handleSubmit(onSubmit)} 
@@ -137,14 +137,14 @@ const SignUpForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="shad-button_primary">
+          <Button type="submit" className="shad-button_primary bg-black text-white">
             {isCreatingUser || isUserLoading ? (
               <div className=" flex-center gap-2">
                 <Loader /> Loading...
               </div>
             ): 'Sign Up'}
           </Button>
-          <p className="text-small-regular text-light-2 text-center mt-2" >
+          <p className="text-small-regular text-dark-2 text-center mt-2" >
             Already have an account? 
             <Link to='/sign-in' className='text-primary-500 text-small-semi-bold ml-1'>
               Sign in

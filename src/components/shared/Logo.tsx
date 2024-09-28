@@ -8,7 +8,7 @@ const Logo = ({width, height}: ImageWH) => {
     return (
         <div className="flex-center w-full">
             <img 
-                src="/assets/images/logo.svg"
+                src="/assets/images/logo.png"
                 alt='logo'
                 width={width}
                 height={height}

@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-dark-1 text-white min-h-screen font-inter;
+    @apply bg-white text-black min-h-screen font-inter;
   }
 }
 
@@ -74,7 +74,7 @@
 
   /* UTILITIES */
   .invert-white {
-    @apply invert brightness-0 transition;
+    @apply invert brightness-100 transition;
   }
 
   .flex-center {
@@ -96,18 +96,17 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #09090a;
+    background: #f0f0f0;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #E68528;
+    background: #d4d4d8;
     border-radius: 50px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #7878a3;
+    background: #b4b4b8;
   }
-
 
   .custom-scrollbar::-webkit-scrollbar {
     width: 3px;
@@ -116,16 +115,16 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
+    background: #f0f0f0;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #E68528;
+    background: #d4d4d8;
     border-radius: 50px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #7878a3;
+    background: #b4b4b8;
   }
 
   .common-container {
@@ -151,7 +150,7 @@
   }
 
   .explore-search {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 bg-gray-100 border-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
   }
 
   /* Home */
@@ -173,19 +172,19 @@
   }
 
   .post_details-card {
-    @apply bg-dark-2 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
+    @apply bg-gray-100 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-gray-300 xl:rounded-l-[24px];
   }
 
   .post_details-img {
-    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-dark-1;
+    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-gray-200;
   }
 
   .post_details-info {
-    @apply bg-dark-2 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
+    @apply bg-gray-100 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
   }
 
   .post_details-delete_btn {
-    @apply p-0 flex gap-3 hover:bg-transparent hover:text-light-1  text-light-1 small-medium lg:base-medium;
+    @apply p-0 flex gap-3 hover:bg-transparent hover:text-black text-black small-medium lg:base-medium;
   }
 
   /* Profile */
@@ -198,7 +197,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-4 w-48 bg-gray-100  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */
@@ -208,7 +207,7 @@
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-gray-100 px-5 py-4 md:hidden;
   }
 
   /* File uploader */
@@ -217,7 +216,7 @@
   }
 
   .file_uploader-label {
-    @apply text-light-4 text-center small-regular w-full p-4 border-t border-t-dark-4;
+    @apply text-gray-500 text-center small-regular w-full p-4 border-t border-t-gray-300;
   }
 
   .file_uploader-box {
@@ -230,30 +229,30 @@
   }
 
   .grid-post_link {
-    @apply flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full;
+    @apply flex rounded-[24px] border border-gray-300 overflow-hidden cursor-pointer w-full h-full;
   }
 
   .grid-post_user {
-    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-dark-3 to-transparent rounded-b-[24px] gap-2;
+    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-gray-300 to-transparent rounded-b-[24px] gap-2;
   }
 
   /* Left sidebar */
   .leftsidebar {
-    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
+    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-gray-100;
   }
 
   .leftsidebar-link {
-    @apply rounded-lg base-medium hover:bg-primary-500 transition;
+    @apply rounded-lg base-medium hover:bg-black hover:text-white transition;
   }
 
   /* right sidebar */
   .rightsidebar {
-    @apply hidden sm:flex flex-1 px-10 py-10 justify-center items-center min-w-44 max-w-96 bg-dark-2;
+    @apply hidden sm:flex flex-1 px-10 py-10 justify-center items-center min-w-44 max-w-96 bg-gray-100;
   }
 
   /* Post Card */
   .post-card {
-    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
+    @apply bg-gray-100 rounded-3xl border border-gray-300 p-5 lg:p-7 w-full max-w-screen-sm;
   }
 
   .post-card_img {
@@ -262,44 +261,74 @@
 
   /* Topbar */
   .topbar {
-    @apply sticky top-0 z-50 md:hidden bg-dark-2 w-full;
+    @apply sticky top-0 z-50 md:hidden bg-gray-100 w-full;
   }
 
   /* User card */
   .user-card {
-    @apply flex-center flex-col gap-4 border border-dark-4 rounded-[20px] px-5 py-8;
+    @apply flex-center flex-col gap-4 border border-gray-300 rounded-[20px] px-5 py-8;
   }
 }
 
 @layer components {
-  /* SHADCN COMPONENTS */
-  /* Form */
-  .shad-form_label {
-    @apply text-white !important;
+  /* SHADCN Button Component */
+  .shadcn-btn {
+    @apply bg-red-600 text-white font-medium px-4 py-2 rounded-lg transition-all ease-in-out duration-300 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
   }
 
-  .shad-form_message {
-    @apply text-red !important;
+  .shadcn-btn-primary {
+    @apply bg-red-600 text-white hover:bg-red-700;
   }
 
-  .shad-input {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+  .shadcn-btn-secondary {
+    @apply bg-gray-100 text-black border border-gray-300 hover:bg-gray-200;
   }
 
-  .shad-textarea {
-    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+  /* Card Component */
+  .card {
+    @apply bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 ease-in-out;
   }
 
-  /* Button */
-  .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500 text-light-1 flex gap-2 !important;
+  .card-header {
+    @apply text-lg font-semibold mb-2;
   }
 
-  .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5 text-light-1 flex gap-2 !important;
+  .card-body {
+    @apply text-base text-gray-700;
   }
 
-  .shad-button_ghost {
-    @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-white !important;
+  /* Modal */
+  .modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50;
+  }
+
+  .modal-content {
+    @apply bg-white p-6 rounded-lg shadow-lg max-w-lg w-full;
+  }
+
+  /* Alert */
+  .alert {
+    @apply p-4 mb-4 border rounded-lg flex items-start gap-4;
+  }
+
+  .alert-success {
+    @apply bg-green-100 text-green-700 border-green-500;
+  }
+
+  .alert-error {
+    @apply bg-red-100 text-red-700 border-red-500;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600;
+  }
+
+  .badge-primary {
+    @apply bg-red-600 text-white;
+  }
+
+  .badge-secondary {
+    @apply bg-gray-200 text-gray-800;
   }
 }

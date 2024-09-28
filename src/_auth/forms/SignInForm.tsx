@@ -64,8 +64,8 @@ const SignInForm = () => {
       <div className="sm:w-420 flex-center flex-col" >
         <Logo />
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-7" > Log in to your account </h2>
-        <p className="text-primary-600 small-medium md:base-regular mt-7" >
-          To use SnapGram, please enter your account details
+        <p className="text-primary-600 text-center small-medium md:base-regular mt-7" >
+          Start your journey with us! <br /> Discover India's best Philatelists Community here.
         </p>
         <form 
           onSubmit={form.handleSubmit(onSubmit)} 
@@ -97,14 +97,14 @@ const SignInForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="shad-button_primary">
+          <Button type="submit" className="shad-button_primary bg-black text-white">
             {isSigningIn || isUserLoading ? (
               <div className=" flex-center gap-2">
                 <Loader /> Loading...
               </div>
             ): 'Sign In'}
           </Button>
-          <p className="text-small-regular text-light-2 text-center mt-2" >
+          <p className="text-small-regular text-dark-2 text-center mt-2" >
             Don't have an account? 
             <Link to='/sign-up' className='text-primary-500 text-small-semi-bold ml-1'>
               Sign up
