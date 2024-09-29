@@ -45,7 +45,7 @@ const LeftSidebar = () => {
             return (
               <li 
               key={link.label} 
-              className={isActive ? 'bg-primary-500 text-white group leftsidebar-link':'group leftsidebar-link'}>
+              className={isActive ? 'bg-primary-500 group leftsidebar-link':'group leftsidebar-link'}>
                 <NavLink 
                   to={link.route}
                   className='flex gap-4 items-center p-4'

@@ -43,7 +43,7 @@ const FollowButton = ({ targetUserId, currentUserId }: FollowButtonProps) => {
     <div className="flex justify-between items-center z-20">{!showButton ? (<div></div>) : (
       <div>
         {isFollowingUser || isUnfollowingUser ? (<Loader />) : (
-        <Button onClick={handleFollow} className="shad-button_primary px-8">
+        <Button onClick={handleFollow} className="shad-button_primary bg-black px-8">
           {isFollowingState ? "Unfollow" : "Follow"}
         </Button>
         )

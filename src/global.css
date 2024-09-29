@@ -150,7 +150,7 @@
   }
 
   .explore-search {
-    @apply h-12 bg-gray-100 border-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 bg-black border-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
   }
 
   /* Home */
@@ -197,7 +197,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-gray-100  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-4 w-48 bg-gray-100 text-black  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */

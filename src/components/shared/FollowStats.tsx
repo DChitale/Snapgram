@@ -40,15 +40,15 @@ const FollowStats = ({ targetUserId, postlength }: FollowButtonProps) => {
     <div className="flex gap-8 mt-10 items-center justify-center xl:justify-start flex-wrap z-20">
         <div className="flex-center gap-2">
             <p className="small-semibold lg:body-bold text-primary-500">{postlength}</p>
-            <p className="small-medium lg:base-medium text-light-2">Posts</p>
+            <p className="small-medium lg:base-medium text-dark-2">Posts</p>
         </div>
         <div className="flex-center gap-2">
             <p className="small-semibold lg:body-bold text-primary-500">{followersCount}</p>
-            <p className="small-medium lg:base-medium text-light-2">Following</p>
+            <p className="small-medium lg:base-medium text-dark-2">Following</p>
         </div>
         <div className="flex-center gap-2">
             <p className="small-semibold lg:body-bold text-primary-500">{followingCount}</p>
-            <p className="small-medium lg:base-medium text-light-2">Followers</p>
+            <p className="small-medium lg:base-medium text-dark-2">Followers</p>
         </div>
     </div>
     
